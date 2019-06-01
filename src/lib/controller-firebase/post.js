@@ -52,4 +52,19 @@ export const getUserData = (user, input) => {
   }
   
   
- 
+  export const getImagePost = (file, cb) => {
+    //create ref
+    const storageRef = firebase.storage().ref(`images/${file.name}`)
+  
+    const imageRef = storageRef.child(`images/${file.name}`)
+    //update file to fb storage
+    const task = imageRef.put(file)
+    return task.on('state_changed', (snapshot) => {
+    }, (error) => {
+    }, () => {
+      //get updated img url 
+      const downloadImg = task.snapshot.ref.getDownloadURL()
+      downloadImg.then(cb)
+    })
+  }
+  
