@@ -5,13 +5,13 @@ export const funcRegister = (emailSignIn, passwordSignIn) => firebase.auth().cre
 export const funcGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     return firebase.auth().signInWithPopup(provider)
-  };
-  export const funcFacebook = () => {
+};
+export const funcFacebook = () => {
     const provider = new firebase.auth.FacebookAuthProvider();
     return firebase.auth().signInWithPopup(provider)
-  }
-  export const signOut = () => firebase.auth().signOut();
+}
+export const signOut = () => firebase.auth().signOut();
 
-export const activeUser = (cb) => firebase.auth().onAuthStateChanged(cb)
+export const activeUser = (cb) => firebase.auth().onAuthStateChanged(cb);
 
-export const currentUser = () => firebase.auth().currentUser
+export const currentUser = () => firebase.auth().currentUser;
