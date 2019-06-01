@@ -1,4 +1,4 @@
-
+import { components } from "./ui/index.js";
 const changeRoute = (hash) => {
     console.log(hash);
     const mainSection = document.getElementById('main');
