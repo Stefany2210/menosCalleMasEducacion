@@ -1,3 +1,4 @@
+
 export const getUserData = (user, input) => {
     const firestore = firebase.firestore();
     return firestore.doc(`users/${user.uid}`).set({
