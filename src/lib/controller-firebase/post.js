@@ -13,4 +13,43 @@ export const getUserData = (user, input) => {
     return firestore.collection('users').doc(uid).onSnapshot(cb)
   }
   
+  export const addPost = (input, user, uid, like, privacyState, photoUrl) => {
+    const firestore = firebase.firestore();
+    return firestore.collection('posts').add({
+      post: input,
+      user: user,
+      uid: uid,
+      likes: like,
+      privacy: privacyState,
+      photo: photoUrl,
+      date: new Date()
+    })
+  }
   
+  export const getRealTimePost = (cb) => {
+    const firestore = firebase.firestore();
+    const allPosts = firestore.collection('posts').orderBy('date', 'desc');
+    allPosts.onSnapshot(snapshot => {
+      const posts = []
+      snapshot.forEach(doc => {
+        const data = doc.data();
+        posts.push({ id: doc.id, doc: data });
+      })
+      cb(posts)
+    })
+  }
+  
+  export const deletePost = (id) => {
+    const firestore = firebase.firestore();
+    return firestore.collection('posts').doc(id).delete()
+  }
+  
+  export const editPost = (id, input) => {
+    const firestore = firebase.firestore();
+    return firestore.collection('posts').doc(id).update({
+      post: input
+    });
+  }
+  
+  
+ 
