@@ -15,7 +15,7 @@ const userSection = (myData) => {
       <div class="text-user">
       <p id="nameNeedChange" class="nameTitle"> ${myData.name}</p>
       <input id="inputName" class="hide"/>
-      <p>WeBooker</p>
+      <p>colaborador/a</p>
       <div class="button-pencil click button-icon" class="hide" id="changeName"> </div>   
   `;
 
@@ -40,7 +40,7 @@ export const Content = (posts) => {
   <ul class="nav offUl">
     <li class="nav-content firstLi">
       <div id="show-menu" class="menu"></div>
-      <h1 class="white nav-title">WeBooks </h1>
+      <h1 class="white nav-title">Menos Calle mas educacion</h1>
       <div class="displayFlex hideSmall dontHide">
         <button id="btn-out" class="click button-icon button-leave"></button>
         <label for="btn-out" class="white">Cerrar sesión</label>

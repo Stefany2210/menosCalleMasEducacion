@@ -33,3 +33,4 @@ export const editComments = (comment, input) => {
   if (currentUser().uid === comment.doc.uid) {
     editComment(comment.doc.postId, comment.id, input)
   }
+}
