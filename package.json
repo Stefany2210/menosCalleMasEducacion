@@ -1,26 +1,38 @@
 {
-  "name": "menoscallemaseducacion",
+  "name": "social-network",
   "version": "1.0.0",
-  "description": "uso de redes social para lacreacion de un mejor futuro para menores de la calle",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Stefany2210/menosCalleMasEducacion.git"
-  },
+  "description": "Social Network @ Laboratoria",
+  "main": "src/index.html",
   "keywords": [
-    "npm",
-    "js"
+    "javascript",
+    "firebase",
+    "jest"
   ],
-  "author": "illariCode",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Stefany2210/menosCalleMasEducacion/issues"
+  "scripts": {
+    "htmlhint": "htmlhint dist/*.html ",
+    "eslint": "eslint --ext .js src/ test/",
+    "test": "jest --coverage"
   },
-  "homepage": "https://github.com/Stefany2210/menosCalleMasEducacion#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.7.1",
+    "eslint": "^5.10.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "firebase-mock": "^2.2.10",
+    "htmlhint": "^0.10.1",
+    "jest": "^24.7.1",
+    "mock-cloud-firestore": "^0.9.3",
+    "regenerator-runtime": "^0.13.1"
+  },
   "dependencies": {
-    "nodemailer": "^6.2.1"
+    "@firebase/firestore": "^1.3.1",
+    "express": "^4.16.4",
+    "firebase-admin": "^7.3.0",
+    "firebase-functions": "^2.3.0",
+    "sweetalert": "^2.1.2"
   }
 }
