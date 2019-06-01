@@ -1,4 +1,3 @@
-    
 import { getRealTimeData, addPost, deletePost, editPost, getImagePost } from '../controller-firebase/posts.js'
 import { currentUser } from '../controller-firebase/auth.js';
 

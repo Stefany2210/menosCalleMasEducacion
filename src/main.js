@@ -1,20 +1,21 @@
 import { initRoute } from './routes.js';
 
-  // Your web app's Firebase configuration
-  export const initFirebase = () => {
-  const firebaseConfig = {
-    apiKey: "AIzaSyAijAiMyGhkHKg9tw9I_aBBosW6Re2jOrY",
-    authDomain: "maseducacion-3245d.firebaseapp.com",
-    databaseURL: "https://maseducacion-3245d.firebaseio.com",
-    projectId: "maseducacion-3245d",
-    storageBucket: "maseducacion-3245d.appspot.com",
-    messagingSenderId: "228618106285",
-    appId: "1:228618106285:web:f5409e087ef58b1e"
+// Initialize Firebase
+export const initFirebase = () => {
+  const config = {
+    apiKey: "AIzaSyDq83GdPtM8kOrF6BGhTuAkFFFC7T-ou2c",
+    authDomain: "fir-basics-c204d.firebaseapp.com",
+    databaseURL: "https://fir-basics-c204d.firebaseio.com",
+    projectId: "fir-basics-c204d",
+    storageBucket: "fir-basics-c204d.appspot.com",
+    messagingSenderId: "582126712915"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  }
-  window.addEventListener('load', () => {
-    initFirebase();
-    initRoute();
-  });
+
+
+  firebase.initializeApp(config);
+}
+
+window.addEventListener('load', () => {
+  initFirebase();
+  initRoute();
+});

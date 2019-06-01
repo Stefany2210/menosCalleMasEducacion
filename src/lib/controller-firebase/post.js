@@ -52,7 +52,6 @@ export const getUserData = (user, input) => {
     });
   }
   
-  
   export const getImagePost = (file, cb) => {
     //create ref
     const storageRef = firebase.storage().ref(`images/${file.name}`)
