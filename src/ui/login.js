@@ -10,7 +10,7 @@ export const Login = () => {
     
     <div id='login' class="container1 px-5">
   
-      <h2 class="title-pass">WEBOOKS</h2>
+      <h2 class="title-pass">Menos calle mas educacion</h2>
       <h4 class="px-4 subtitle-pass" >Bienvenidx!</h4>
   
       <div class="one-column">
