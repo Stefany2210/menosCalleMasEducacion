@@ -1,0 +1,23 @@
+{
+  "name": "menoscallemaseducacion",
+  "version": "1.0.0",
+  "description": "uso de redes social para lacreacion de un mejor futuro para menores de la calle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stefany2210/menosCalleMasEducacion.git"
+  },
+  "keywords": [
+    "npm",
+    "js"
+  ],
+  "author": "illariCode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Stefany2210/menosCalleMasEducacion/issues"
+  },
+  "homepage": "https://github.com/Stefany2210/menosCalleMasEducacion#readme"
+}
