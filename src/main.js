@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { initRoute } from './routes.js';
 
 // Initialize Firebase
@@ -21,4 +19,3 @@ window.addEventListener('load', () => {
   initFirebase();
   initRoute();
 });
->>>>>>> bf31a1d82ecabea65a35cd7618c3b1631994b4b4
