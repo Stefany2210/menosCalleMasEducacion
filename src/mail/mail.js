@@ -1,19 +1,18 @@
-// export {funcion de datos} from ; 
 // var nodemailer = require('nodemailer');
 
 // var transporter = nodemailer.createTransport({
 //   service: 'gmail',
 //   auth: {
-//     user: 'tucorreo@gmail.com',
-//     pass: 'tucontraseña'
+//     user: 'zurirosas96@gmail.com',
+//     pass: 'noeko9602'
 //   }
 // });
 
-// var mensaje = "Hola desde nodejs...";
+// var mensaje = "Hola desde mas educa...";
 
 // var mailOptions = {
-//   from: 'tucorreo@gmail.com',
-//   to: 'mi-amigo@yahoo.com',
+//   from: 'zurirosas96@gmail.com',
+//   to: 'andrea.lopez.agurto@gmail.com',
 //   subject: 'Reporte semanal de casos de niños en la calle',
 //   text: mensaje
 // };
