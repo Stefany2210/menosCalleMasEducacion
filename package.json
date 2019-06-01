@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Stefany2210/menosCalleMasEducacion/issues"
   },
-  "homepage": "https://github.com/Stefany2210/menosCalleMasEducacion#readme"
+  "homepage": "https://github.com/Stefany2210/menosCalleMasEducacion#readme",
+  "dependencies": {
+    "nodemailer": "^6.2.1"
+  }
 }
