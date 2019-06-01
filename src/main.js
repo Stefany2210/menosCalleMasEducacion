@@ -3,12 +3,13 @@ import { initRoute } from './routes.js';
 // Initialize Firebase
 export const initFirebase = () => {
   const config = {
-    apiKey: "AIzaSyDq83GdPtM8kOrF6BGhTuAkFFFC7T-ou2c",
-    authDomain: "fir-basics-c204d.firebaseapp.com",
-    databaseURL: "https://fir-basics-c204d.firebaseio.com",
-    projectId: "fir-basics-c204d",
-    storageBucket: "fir-basics-c204d.appspot.com",
-    messagingSenderId: "582126712915"
+    apiKey: "AIzaSyAijAiMyGhkHKg9tw9I_aBBosW6Re2jOrY",
+    authDomain: "maseducacion-3245d.firebaseapp.com",
+    databaseURL: "https://maseducacion-3245d.firebaseio.com",
+    projectId: "maseducacion-3245d",
+    storageBucket: "maseducacion-3245d.appspot.com",
+    messagingSenderId: "228618106285",
+
   };
 
 
