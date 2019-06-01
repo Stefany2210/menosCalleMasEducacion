@@ -70,3 +70,59 @@ import { privacyPost, likePlus, addComment, deleteComment, getRealTimeComment, e
 import { getRealTimePost } from "../src/lib/controller-firebase/posts.js";
 
 
+describe('darle like', () => {
+  it('deberia retornar  post con : 1 like', (done) => {
+    return likePlus('123456', 1).then(() => {
+      const callback = (notes) => {
+        expect(notes[0].doc.likes).toEqual(1)
+        done()
+      }
+      getRealTimePost(callback)
+    })
+  })
+});
+
+
+describe('editar privacidad de post', () => {
+  it('deberia retornar  post con privacy: public ', (done) => {
+    return privacyPost('123456', "public").then(() => {
+      const callback = (notes) => {
+        expect(notes[0].doc.privacy).toEqual("public")
+        done()
+      }
+      getRealTimePost(callback)
+    })
+  })
+})
+
+
+describe('agregar comentario', () => {
+  it('deberia agregar un comentario ', (done) => {
+    return addComment('Dame croquetas', 'Pepi', 'axxYZ12', '234567').then(() => {
+      const callback = (notes) => {
+        const result = notes.filter((note) => {
+          return note.doc.post === 'Dame croquetas';
+        })
+        expect(result[0].doc.post).toEqual('Dame croquetas');
+        done()
+      }
+      getRealTimeComment('234567', callback)
+    })
+  })
+
+});
+describe('eliminar comentario', () => {
+  it('debe eliminar comment con id ', (done) => {
+    return deleteComment('123456', '1234567').then(() => {
+      const callback = (notes) => {
+        const result = notes.filter((note) => {
+          return note.id === '1234567';
+        })
+        expect(result[0]).toBe(undefined)
+        done()
+      }
+      getRealTimeComment('123456', callback)
+    })
+  })
+})
+
