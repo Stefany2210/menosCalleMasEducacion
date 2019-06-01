@@ -10,3 +10,8 @@ export const funcGoogle = () => {
     const provider = new firebase.auth.FacebookAuthProvider();
     return firebase.auth().signInWithPopup(provider)
   }
+  export const signOut = () => firebase.auth().signOut();
+
+export const activeUser = (cb) => firebase.auth().onAuthStateChanged(cb)
+
+export const currentUser = () => firebase.auth().currentUser
