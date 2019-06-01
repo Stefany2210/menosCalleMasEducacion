@@ -76,7 +76,46 @@ export const listPosts = (publi) => {
     const like = div.querySelector('#button-like');
     const dislike = div.querySelector('#button-dislike');
   
+    like.addEventListener('click', () => {
+      const plusLike = publi.doc.likes + 1;
+      toggleLikes(publi, plusLike)
+    });
   
+    dislike.addEventListener('click', () => {
+      const lessLike = publi.doc.likes - 1;
+      toggleLikes(publi, lessLike)
+    })
+  
+    const btnDelete = div.querySelector('#delete');
+    btnDelete.addEventListener('click', () => deletePosts(publi));
+  
+    const btnEditPost = div.querySelector('#edit-post');
+    btnEditPost.addEventListener('click', () => {
+      const textEdit = div.querySelector('#post-message');
+      const updateData = div.querySelector("#update-data");
+      updateData.classList.toggle('hide');
+      if (updateData.value !== "") {
+        editPosts(publi, updateData.value);
+      };
+      textEdit.classList.toggle('hide');
+    });
+  
+    const privacy = div.querySelector('#edit-privacy');
+  
+    if (privacy.options[0].value === 'public') {
+      privacy.options[0].innerHTML = 'Público'
+      privacy.options[1].setAttribute('value', 'private')
+      privacy.options[1].innerHTML = 'Solo yo'
+    } else if (privacy.options[0].value === 'private') {
+      privacy.options[0].innerHTML = 'Solo yo'
+      privacy.options[1].setAttribute('value', 'public');
+      privacy.options[1].innerHTML = 'Público'
+    }
+    if (publi.doc.uid == currentUser().uid) {
+      btnEditPost.classList.remove('hide')
+      privacy.classList.remove('hide')
+    }
+    privacy.addEventListener('click', () => editPrivacy(publi, privacy.value))
   
     return div
   }
